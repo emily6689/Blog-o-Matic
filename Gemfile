@@ -5,7 +5,6 @@ gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick', require: false
-gem 'quiet-assets'
 gem 'twitter-bootstrap-rails'
 
 group :test, :development do
@@ -17,7 +16,7 @@ group :test, :development do
 end
 
 group :development do
-  gem 'quiet-assets'
+  gem 'quiet_assets'
 end
 
 group :test do

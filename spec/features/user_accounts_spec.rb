@@ -4,14 +4,10 @@ feature 'user accounts', %Q{
   As a user,
   I want to create an account,
   So I can use the app's services
-  } do
+} do
   #  ----Acceptance Criteria----
-  #   1.  I can register by providing my username, email, and a password
-  #   2.  I can login with my email and password or sign out
-  #   3.  I am automatically signed in when I start the app
-  #   4.  I can view my list of favorites
-  #   5.  I can view an item from the list
-  #   6.  I can delete an item from the list
+  #  I can register by providing my username, email, and a password
+  #  I can login with my email and password and sign out
 
   scenario 'user registers with valid information' do
       prior_count = User.count

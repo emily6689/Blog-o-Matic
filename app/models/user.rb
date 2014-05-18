@@ -3,4 +3,15 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  validates :username, presence: true,
+            uniqueness: {case_sensitive: false}
+  validates :role, inclusion: {in: ['admin', 'member']}
+
+  has_many :posts
+  has_many :votes
+
+  def is_admin?
+    role == 'admin'
+  end
 end

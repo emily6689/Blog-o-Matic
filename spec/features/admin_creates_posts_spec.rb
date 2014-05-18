@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 feature 'admin creates posts', %Q{
   As a user with admin privileges,
   I want to create posts,

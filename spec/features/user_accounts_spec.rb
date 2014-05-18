@@ -9,7 +9,7 @@ feature 'user accounts', %Q{
   #   1.  I can register by providing my username, email, and a password
   #   2.  I can login with my email and password or sign out
   #   3.  I am automatically signed in when I start the app
-  #   4.  I can view my list of favorites
+  #   4.  I can view a list of my favorite posts
   #   5.  I can view an item from the list
   #   6.  I can delete an item from the list
 

@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
             uniqueness: {case_sensitive: false}
   validates :role, inclusion: {in: ['admin', 'member']}
 
-  has_many :posts
+  has_many :posts,
+    foreign_key: :author_id
   has_many :votes
 
   def is_admin?

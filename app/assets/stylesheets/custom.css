@@ -1,0 +1,23 @@
+.container{
+  margin: auto;
+  width: 80%;
+}
+
+h1.right{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.right-nav{
+  position: absolute;
+  font-size: small;
+}
+
+.right-nav li{
+  display: inline;
+}
+
+
+
+

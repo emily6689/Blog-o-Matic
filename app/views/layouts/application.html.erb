@@ -2,13 +2,37 @@
 <html>
 <head>
   <title>BlogProject</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div class='container'>
+
+<div class="row">
+
+<div class = 'col-md-6'>
+  <h1 class='center'>Title</h1>
+</div>
+
+<div class = 'col-md-6 right-nav'>
+  <ul class = 'mylist'>
+   <li class= 'right-nav'>Sign Out</li>
+  </ul>
+</div>
+
+</div>
+
+
+<ul class="nav nav-pills nav-justified col-md-6">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
 <%= yield %>
+</div>
 
 </body>
 </html>

@@ -17,7 +17,7 @@ feature 'user accounts', %Q{
 
       visit root_path
       user = FactoryGirl.build(:user)
-      click_on 'Register'
+      click_on 'Sign Up'
       fill_out_registration_form(user)
       click_on 'Sign up'
 

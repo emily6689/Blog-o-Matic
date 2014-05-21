@@ -12,10 +12,17 @@ h1.right{
 .right-nav{
   position: absolute;
   font-size: small;
+  float: right;
+  position:absolute;
+  right:0px;
+}
+
+ul{
+  list-style-type: none;
 }
 
 .right-nav li{
-  display: inline;
+  text-decoration: none;
 }
 
 

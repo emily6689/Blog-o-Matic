@@ -3,11 +3,25 @@ class PostsController < ApplicationController
   before_action :authorize_user, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
+    if params[:id]
+      @post = Post.find(params[:id])
+    else
+      @post = Post.last
+    end
   end
 
   def show
-    @post = Post.find(params[:id])
+    @posts = Post.all
+    if params[:id]
+      @post = Post.find(params[:id])
+    else
+      @post = Post.last
+    end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new

@@ -4,11 +4,13 @@
     <li><a href="##">Popular</a></li>
     <li><a href="###">Tags</a></li>
   </ul>
+</div>
 
-  <div class = "post-list">
-    <% @posts.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body.slice(0..100) %></p>
-    <% end %>
-  </div>
+<%= render 'post' %>
+
+<div class = "post-list">
+  <% @posts.each do |post| %>
+    <h4><%= link_to post.title, post_path(post) %></h4>
+    <p><%= post.body.slice(0..100) %></p>
+  <% end %>
 </div>

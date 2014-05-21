@@ -1,6 +1,10 @@
 <div class='post col-md-8 col-sm-8'>
   <h2><%= @post.title %></h2>
   <div class='post_content'>
-    <p><%= @post.body %></p>
+    <%= simple_format(@post.body) %>
   </div>
+  <small class='post-links'>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+    <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Delete this post?"} %>
+  </small>
 </div>

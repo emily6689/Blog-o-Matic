@@ -1,0 +1,14 @@
+<div class='sidebar col-md-4 col-sm-4'>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Recent</a></li>
+    <li><a href="##">Popular</a></li>
+    <li><a href="###">Tags</a></li>
+  </ul>
+
+  <div class = "post-list">
+    <% @posts.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body.slice(0..100) %></p>
+    <% end %>
+  </div>
+</div>

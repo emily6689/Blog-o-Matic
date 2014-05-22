@@ -9,7 +9,7 @@ feature 'user accounts', %Q{
   #   1.  I can register by providing my username, email, and a password
   #   2.  I can login with my email and password or sign out
   #   3.  I am automatically signed in when I start the app
-  #   4.  I can view a list of my favorite posts
+  #   4.  I can view a list of my favorite posts f
 
 
   scenario 'user registers with valid information' do

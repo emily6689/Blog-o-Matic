@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
     foreign_key: :author_id
   has_many :votes
 
+  mount_uploader :gravatar, GravatarUploader
+
   def is_admin?
     role == 'admin'
   end

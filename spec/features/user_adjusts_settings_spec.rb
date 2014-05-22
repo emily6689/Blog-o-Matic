@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 feature 'user account settings', %Q{
   As a registered user,
   I want to edit my account settings,
@@ -15,12 +14,18 @@ feature 'user account settings', %Q{
 
 
   scenario "user can visit account settings page" do
-    visit root_path
     user = FactoryGirl.create(:user)
+    FactoryGirl.create_list(:post, 10)
+    visit root_path
     click_on 'Sign In'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_on 'Sign in'
+    within('div.form-actions') do
+      click_on 'Sign in'
+    end
     click_on 'Account Settings'
+
+    expect(page).to have_content("Gravatar")
+    expect(page).to have_content("Website")
   end
 end

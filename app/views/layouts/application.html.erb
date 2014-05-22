@@ -33,20 +33,18 @@
 
 
   <ul class="nav nav-pills nav-justified col-md-6">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="##">Profile</a></li>
-    <li><a href="###">Messages</a></li>
+    <li class="active"><a href="#">Blog</a></li>
+    <li><a href="##">About</a></li>
+    <% if current_user %>
+      <li><%= link_to 'Account Settings', edit_user_registration_path%></li>
+    <% else %>
+      <li><a href="###">Register</a></li>
+    <% end %>
   </ul>
 
   <%= yield %>
 
-  <div class = "post-list">
-  <% @posts.each do |post| %>
-    <h4><%= link_to post.title, post_path(post), remote: true %></h4>
-    <p><%= post.body.slice(0..100) + " ..." %></p>
-  <% end %>
 
-</div>
 </div>
 
 </body>

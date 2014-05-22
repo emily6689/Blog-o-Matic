@@ -6,7 +6,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick', require: false
 gem 'twitter-bootstrap-rails'
-gem 'carrierwave'
+gem 'rmagick'
 
 group :test, :development do
   gem 'dotenv-rails'

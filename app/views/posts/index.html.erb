@@ -8,4 +8,11 @@
 
 <%= render 'post' %>
 
+<div class = "post-list">
+  <% @posts.each do |post| %>
+    <h4><%= link_to post.title, post_path(post), remote: true %></h4>
+    <p><%= post.body.slice(0..100) + " ..." %></p>
+  <% end %>
+</div>
+
 
